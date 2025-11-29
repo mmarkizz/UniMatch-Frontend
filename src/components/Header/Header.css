@@ -30,6 +30,7 @@
   padding: 0.5rem 0;
   position: relative;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -62,6 +63,7 @@
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .auth-link:hover {

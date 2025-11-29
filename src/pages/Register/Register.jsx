@@ -1,25 +1,41 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Register.css';
 
 const Register = () => {
   return (
     <div className="register-page">
-      <div className="container">
-        <div className="register-form-container">
-          <h1>Sign Up</h1>
+      <div className="register-center-container">
+        <div className="register-card">
+          <h1 className="register-title">Sign Up</h1>
           <form className="register-form">
             <div className="form-group">
-              <input type="text" placeholder="First Name" />
+              <label>First Name</label>
+              <input 
+                type="text" 
+                className="form-input"
+              />
             </div>
             <div className="form-group">
-              <input type="text" placeholder="Last Name" />
+              <label>Last Name</label>
+              <input 
+                type="text" 
+                className="form-input"
+              />
             </div>
             <div className="form-group">
-              <input type="date" placeholder="Date of Birth" />
+              <label>Date of Birth</label>
+              <input 
+                type="text" 
+                placeholder="дд.мм.гггг"
+                className="form-input date-input"
+              />
             </div>
             <button type="submit" className="submit-btn">Next</button>
-            <div className="form-links">
-              <a href="#login" className="form-link">Already have an account?</a>
+            <div className="form-footer">
+              <Link to="/login" className="form-link">
+                Already have an account?
+              </Link>
             </div>
           </form>
         </div>

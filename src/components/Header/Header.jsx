@@ -10,8 +10,8 @@ const Header = () => {
       <div className="header-container">
         <nav className="nav">
           <Link 
-            to="/" 
-            className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
+            to="/create-event" 
+            className={`nav-link ${location.pathname === '/create-event' ? 'active' : ''}`}
           >
             Создать мероприятие
           </Link>
@@ -22,10 +22,10 @@ const Header = () => {
             Найти мероприятие
           </Link>
           <Link 
-            to="/recent" 
-            className={`nav-link ${location.pathname === '/recent' ? 'active' : ''}`}
+            to="/profile" 
+            className={`nav-link ${location.pathname === '/profile' ? 'active' : ''}`}
           >
-            Недавние
+            Личный кабинет
           </Link>
         </nav>
         <div className="auth-links">

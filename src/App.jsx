@@ -7,6 +7,7 @@ import CreateEvent from './pages/CreateEvent/CreateEvent';
 import EventDetails from './pages/EventDetails/EventDetails';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
+import Profile from './pages/Profile/Profile';
 import './styles/global.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/event/:id" element={<EventDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </Router>

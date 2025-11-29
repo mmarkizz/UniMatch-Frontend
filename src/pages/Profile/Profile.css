@@ -1,0 +1,238 @@
+.profile-page {
+  padding-top: 100px;
+  min-height: 100vh;
+  background: var(--white);
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Левая колонка - навигация */
+.profile-sidebar {
+  position: sticky;
+  top: 120px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.sidebar-link:hover {
+  background: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
+/* Правая колонка - контент профиля */
+.profile-content {
+  min-height: 600px;
+}
+
+.profile-title {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+/* Информация о пользователе */
+.user-info-section {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid var(--gray-border);
+}
+
+.user-avatar {
+  width: 120px;
+  height: 120px;
+  background: var(--accent-green);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.user-details {
+  flex: 1;
+}
+
+.user-name {
+  color: var(--black);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.user-contacts {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact {
+  color: var(--gray-text);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.user-bio h3 {
+  color: var(--black);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.user-bio p {
+  color: var(--gray-text);
+  line-height: 1.6;
+}
+
+/* Посещенные мероприятия */
+.attended-events-section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  color: var(--black);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.events-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.event-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--gray-border);
+  transition: all 0.3s ease;
+}
+
+.event-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.event-title {
+  color: var(--black);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.event-date {
+  color: var(--gray-text);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.event-location {
+  color: var(--gray-text);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.event-tags {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.event-tag {
+  background: var(--accent-green);
+  color: var(--black);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.details-link {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.details-link:hover {
+  color: var(--black);
+  text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 968px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .profile-sidebar {
+    position: static;
+    order: 2;
+  }
+  
+  .profile-content {
+    order: 1;
+  }
+  
+  .user-info-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .user-avatar {
+    align-self: center;
+  }
+  
+  .user-contacts {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .user-name {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .user-contacts {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+}

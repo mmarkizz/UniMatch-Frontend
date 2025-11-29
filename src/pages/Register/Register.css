@@ -1,31 +1,113 @@
 .register-page {
-  padding-top: 100px;
   min-height: 100vh;
   background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 80px;
 }
 
-.register-form-container {
-  max-width: 400px;
+.register-center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  height: calc(100vh - 80px);
+  padding: 2rem;
+}
+
+.register-card {
   background: var(--white);
-  padding: 3rem 2rem;
-  border-radius: 12px;
+  padding: 3rem;
+  border-radius: 20px;
   border: 1px solid var(--gray-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
   text-align: center;
 }
 
-.register-form-container h1 {
+.register-title {
   color: var(--black);
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .register-form {
   width: 100%;
 }
 
-/* Остальные стили такие же как в Login.css */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--gray-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: var(--white);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent-green);
+  box-shadow: 0 0 0 3px rgba(215, 255, 130, 0.2);
+}
+
+.date-input {
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.date-input::placeholder {
+  color: var(--gray-text);
+  opacity: 0.7;
+}
+
+.submit-btn {
+  width: 100%;
+  background: var(--accent-green);
+  color: var(--black);
+  border: none;
+  padding: 1.2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 2rem 0 1.5rem 0;
+}
+
+.submit-btn:hover {
+  background: #c5f06a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(215, 255, 130, 0.4);
+}
+
+.form-footer {
+  text-align: center;
+}
+
+.form-link {
+  color: var(--gray-text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.form-link:hover {
+  color: var(--black);
+}

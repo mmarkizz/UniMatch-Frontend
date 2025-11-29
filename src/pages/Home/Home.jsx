@@ -5,64 +5,46 @@ import './Home.css';
 const Home = () => {
   return (
     <div className="home-page">
-      <div className="main-content">
+      {/* Hero Section */}
+      <div className="hero-section">
         <div className="container">
-          <div className="content-grid">
-            {/* Левая колонка - навигация */}
-            <div className="nav-sidebar">
-              <h3 className="sidebar-title">Навигация</h3>
-              <nav className="sidebar-nav">
-                <Link to="/create-event" className="sidebar-link active">
-                  Создать мероприятие
-                </Link>
-                <Link to="/events" className="sidebar-link">
-                  Найти мероприятие
-                </Link>
-                <Link to="/recent" className="sidebar-link">
-                  Недавние
-                </Link>
-              </nav>
-              
-              <div className="known-events-section">
-                <h4 className="known-events-title">
-                  Мероприятия, где ты знаешь гостей
-                </h4>
-                <button className="more-btn">Больше</button>
-              </div>
+          <div className="hero-content">
+            <h1 className="hero-title">Welcome to UniPlace</h1>
+            <p className="hero-subtitle">Find and create university events</p>
+            <div className="hero-actions">
+              <Link to="/events" className="hero-btn primary">
+                Find Events
+              </Link>
+              <Link to="/create-event" className="hero-btn secondary">
+                Create Event
+              </Link>
             </div>
+          </div>
+        </div>
+      </div>
 
-            {/* Правая колонка - контент */}
-            <div className="content-area">
-              <div className="welcome-section">
-                <h1 className="welcome-title">Добро пожаловать в UniMatch</h1>
-                <p className="welcome-subtitle">
-                  Находи и создавай университетские мероприятия
+      {/* Features Section */}
+      <div className="features-section">
+        <div className="container">
+          <div className="features-content">
+            <div className="features-grid">
+              <div className="feature-card">
+                <h3 className="feature-title">Discover Events</h3>
+                <p className="feature-description">
+                  Find interesting events happening around your university
                 </p>
-                <div className="welcome-actions">
-                  <Link to="/events" className="action-btn primary">
-                    Найти мероприятия
-                  </Link>
-                  <Link to="/create-event" className="action-btn secondary">
-                    Создать мероприятие
-                  </Link>
-                </div>
               </div>
-
-              <div className="features-section">
-                <div className="features-grid">
-                  <div className="feature-card">
-                    <h3>Находи мероприятия</h3>
-                    <p>Открывай интересные события вокруг твоего университета</p>
-                  </div>
-                  <div className="feature-card">
-                    <h3>Создавай мероприятия</h3>
-                    <p>Организуй и продвигай свои собственные события легко</p>
-                  </div>
-                  <div className="feature-card">
-                    <h3>Общайся</h3>
-                    <p>Знакомься с новыми людьми и расширяй свою сеть контактов</p>
-                  </div>
-                </div>
+              <div className="feature-card">
+                <h3 className="feature-title">Create Events</h3>
+                <p className="feature-description">
+                  Organize and promote your own events easily
+                </p>
+              </div>
+              <div className="feature-card">
+                <h3 className="feature-title">Connect</h3>
+                <p className="feature-description">
+                  Meet new people and expand your network
+                </p>
               </div>
             </div>
           </div>
