@@ -1,0 +1,16 @@
+.create-event {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.create-event h1 {
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.create-event p {
+  text-align: center;
+  color: #666;
+}

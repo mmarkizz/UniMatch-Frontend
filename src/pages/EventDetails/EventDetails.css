@@ -1,0 +1,61 @@
+.event-details-page {
+  padding-top: 100px;
+  min-height: 100vh;
+  background: var(--white);
+}
+
+.event-details-page h1 {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.event-details {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--gray-border);
+}
+
+.event-details h2 {
+  color: var(--black);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.event-date,
+.event-location {
+  color: var(--gray-text);
+  font-size: 1.1rem;
+}
+
+.event-tags {
+  margin-bottom: 2rem;
+}
+
+.event-tag {
+  background: var(--accent-green);
+  color: var(--black);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.event-description {
+  color: var(--black);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}

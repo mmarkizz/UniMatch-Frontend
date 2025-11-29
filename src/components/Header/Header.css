@@ -1,0 +1,83 @@
+.header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-border);
+  padding: 1.5rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.nav {
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-link {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--black);
+}
+
+.nav-link.active {
+  color: var(--black);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1.5rem;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--accent-green);
+}
+
+.auth-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.auth-link {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.auth-link:hover {
+  color: var(--black);
+}
+
+.auth-link.register {
+  background: var(--accent-green);
+  color: var(--black);
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.auth-link.register:hover {
+  background: #c5f06a;
+  transform: translateY(-1px);
+}
