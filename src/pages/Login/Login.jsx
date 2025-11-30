@@ -26,7 +26,7 @@ const Login = () => {
     setError('');
 
     try {
-      const response = await fetch('/api/token/', {
+      const response = await fetch('http://uniplace.unimatch.ru:8000/api/token/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
