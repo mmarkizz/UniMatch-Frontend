@@ -9,15 +9,17 @@ const EventCard = ({ event }) => {
         <h3 className="event-title">{event.title}</h3>
         <span className="event-date">{event.date}</span>
       </div>
+
       <div className="event-location">
         <p className="event-venue">{event.venue}</p>
-        <p className="event-address">{event.address}</p>
       </div>
+
       <div className="event-tags">
         {event.tags.map((tag, index) => (
-          <span key={index} className="event-tag">#{tag}</span>
+          <span key={index} className="event-tag">#{tag.trim()}</span>
         ))}
       </div>
+
       <Link to={`/event/${event.id}`} className="details-link">
         подробности
       </Link>

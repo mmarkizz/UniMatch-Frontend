@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import './EventDetails.css';
 
 const EventDetails = () => {
-  const { id } = useParams(); // вытаскиваем ID из URL
+  const { id } = useParams();
   const [event, setEvent] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

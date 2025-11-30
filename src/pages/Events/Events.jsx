@@ -1,25 +1,50 @@
-import { Link } from 'react-router-dom';
-import './EventCard.css';
+import React, { useEffect, useState } from 'react';
+import EventCard from '../../components/EventCard/EventCard';
+import './Events.css';
 
-const EventCard = ({ event }) => {
+const Events = () => {
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch('http://uniplace.unimatch.ru:8000/api/events/');
+        const data = await response.json();
+
+        const normalized = data.map(event => ({
+          id: event.id,
+          title: event.title,
+          date: event.time,
+          venue: event.location,
+          tags: event.tags ? event.tags.split(',') : []
+        }));
+
+        setEvents(normalized);
+        setLoading(false);
+      } catch (err) {
+        console.error(err);
+        setLoading(false);
+      }
+    };
+
+    fetchEvents();
+  }, []);
+
+  if (loading) return <div className="container"><h2>Загрузка...</h2></div>;
+
   return (
-    <Link to={`/events/${event.id}`} className="event-card-link">
-      <div className="event-card">
-        <h3>{event.title}</h3>
-        <div className="event-card-meta">
-          <span>{event.date}</span>
-          <span>{event.venue}</span>
-        </div>
-        <div className="event-card-tags">
-          {event.tags.map((tag, idx) => (
-            <span key={idx} className="event-tag">
-              #{tag.trim()}
-            </span>
+    <div className="events-page">
+      <div className="container">
+        <h1>Мероприятия</h1>
+        <div className="events-grid">
+          {events.map(event => (
+            <EventCard key={event.id} event={event} />
           ))}
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 
-export default EventCard;
+export default Events;
