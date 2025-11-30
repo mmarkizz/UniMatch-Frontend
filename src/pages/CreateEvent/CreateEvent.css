@@ -40,6 +40,7 @@
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
+  font-family: inherit;
 }
 
 .form-group input:focus,
@@ -61,8 +62,15 @@
   transition: all 0.3s ease;
 }
 
-.submit-btn:hover {
+.submit-btn:hover:not(:disabled) {
   background: #c5f06a;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+}
+
+.submit-btn:disabled {
+  background: var(--gray-border);
+  color: var(--gray-text);
+  cursor: not-allowed;
+  transform: none;
 }
