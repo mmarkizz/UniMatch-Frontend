@@ -42,7 +42,7 @@ const CreateEvent = () => {
 
     try {
       // Отправка POST на бэк с токеном
-      const response = await fetch('http://localhost:8000/api/events/', {
+      const response = await fetch('http://uniplace.unimatch.ru:8000/api/events/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
