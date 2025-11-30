@@ -63,6 +63,7 @@ const Login = () => {
     <div className="login-page">
       <div className="login-center-container">
         <div className="login-card">
+            <p style={{ fontSize: "120px", margin: 0 }}>E</p>
           <h1 className="login-title">Login</h1>
           <form className="login-form" onSubmit={handleSubmit}>
             {error && (
